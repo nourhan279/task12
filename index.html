@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Carousel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body class="flex justify-center items-center h-screen bg-white m-0">
+    <div
+      class="relative w-4/5 max-w-2xl h-96 overflow-hidden border-2 border-gray-300"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <img src="./assets/11.jpeg" class="w-full h-96" />
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/1.webp" class="w-full h-96" />
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/2.jpg" class="w-full h-96" />
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/3.jpg" class="w-full h-96" />
+        </div>
+      </div>
+      <button
+        class="carousel-control absolute top-1/2 left-3 transform -translate-y-1/2 bg-white bg-opacity-50 text-black p-3"
+        onclick="prev()"
+      >
+        ❮
+      </button>
+      <button
+        class="carousel-control absolute top-1/2 right-3 transform -translate-y-1/2 bg-white bg-opacity-50 text-black p-3"
+        onclick="next()"
+      >
+        ❯
+      </button>
+      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+  </body>
+</html>
